@@ -20,7 +20,7 @@ class StateWidget extends StatefulWidget {
   // Returns data of the nearest widget _StateDataWidget
   // in the widget tree.
   static _StateWidgetState of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(_StateDataWidget)
+    return (context.dependOnInheritedWidgetOfExactType<_StateDataWidget>()
             as _StateDataWidget)
         .data;
   }
